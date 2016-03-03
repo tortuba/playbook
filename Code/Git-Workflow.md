@@ -88,7 +88,7 @@ For features:
 
     git checkout develop
     git merge <branch-name> --no-ff
-    git push origin -d <branch-name>
+    git push origin :<branch-name>
     git branch -d <branch-name>
 
 #### Otherwise: Submit a pull request

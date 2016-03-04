@@ -60,7 +60,7 @@ Work, rinse, repeat:
     git add --all
     git commit -m "Fix #42: Present-tense summary under 50 characters"
 
-See [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
+Use "Fix #42" (or any [relevant keyword](https://help.github.com/articles/closing-issues-via-commit-messages/)) to close the issue, or just "#42" to reference the issue if it requires more than one commit.
 
 Rebase frequently to incorporate upstream changes and resolve conflicts.
 

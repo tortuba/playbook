@@ -18,10 +18,16 @@ A guide for programming
 * (default) develop: staging
 
 **Short-lived:**
-* fix/<bug-name>:
+* hotfix/<bug-name>:
+  * Fixes a bug that can't wait for the next release
   * forked from master
   * merged back into master + develop
+* fix/<bug-name>:
+  * Fixes a bug that can wait for the next release
+  * forked from develop
+  * merged back into develop
 * feat/<feature-name>: feature branch
+  * Adds features to the code base
   * forked from develop
   * merged into develop
 
@@ -40,17 +46,17 @@ If we need more people to work on a feature or [if the feature must be spread ov
 
 ### Create a local branch
 
-For production bugs:
+For production hotfix:
 
     git checkout master
     git pull
-    git checkout -b fix/<branch-name>
+    git checkout -b hotfix/<branch-name>
 
-For features:
+For development fix and features:
 
     git checkout develop
     git pull
-    git checkout -b feat/<branch-name>
+    git checkout -b <fix-or-feat>/<branch-name>
 
 ### Work (loop)
 
@@ -61,6 +67,7 @@ Work, rinse, repeat:
     git commit -m "Fix #42: Present-tense summary under 50 characters"
 
 Use "Fix #42" (or any [relevant keyword](https://help.github.com/articles/closing-issues-via-commit-messages/)) to close the issue, or just "#42" to reference the issue if it requires more than one commit.
+Use "Fix c30" to reference a (Crashlytics) crash issue that hasn't its own github issue.
 
 Rebase frequently to incorporate upstream changes and resolve conflicts.
 
@@ -84,7 +91,7 @@ For production bugs:
     git push origin :<branch-name>
     git branch -d <branch-name>
 
-For features:
+For development fix / features:
 
     git checkout develop
     git merge <branch-name> --no-ff

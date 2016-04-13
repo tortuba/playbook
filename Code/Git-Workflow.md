@@ -69,7 +69,7 @@ Work, rinse, repeat:
 Use "Fix #42" (or any [relevant keyword](https://help.github.com/articles/closing-issues-via-commit-messages/)) to close the issue, or just "#42" to reference the issue if it requires more than one commit.
 Use "Fix c30" to reference a (Crashlytics) crash issue that hasn't its own github issue.
 
-Rebase frequently to incorporate upstream changes and resolve conflicts.
+Rebase frequently to incorporate upstream changes and resolve conflicts, but **NOT ON REMOTE BRANCHES**.
 
     git fetch origin
     git rebase origin/<master(fix) or develop(feat)>

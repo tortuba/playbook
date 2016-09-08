@@ -1,5 +1,5 @@
 **Deep Clean**
-Alt-Shift-Cmd-K
+Alt-Shift-Cmd-K or Alt when opening menu
 
 **Autolayout**
 ctrl+cmd+e: Edit all in Scope
